@@ -37,7 +37,7 @@
 | Firmware Validation  | Tests compiled firmware behavior without reviewing the source code       |
 
 
-1️⃣ System-Level Testing
+### 1️⃣ System-Level Testing
 
         1.Description:
                 - This involves testing the entire embedded system as a whole — hardware, firmware, sensors, user interface, and communication — from an external point of view.
@@ -64,30 +64,17 @@
                 - CRC/error checking, framing, and retries.
 
 3️⃣ Acceptance Testing
-🔍 Description:
-Performed by the QA team or client to ensure that the final product meets business, functional, and user requirements. This is the final validation before release.
 
-🧪 Example:
-
-In a GPS tracking device, verify that the location is updated every 30 seconds in the mobile app
-
-Tester ensures end-to-end system (hardware → firmware → server → app) works correctly
-
-✅ What is validated:
-
-All system features function as specified
-
-Edge cases and real-world usage (e.g., cold start, lost GPS signal, battery depletion)
-
-Interface compatibility (e.g., BLE with different phones)
-
-🛠 Tools used:
-
-End-user interface (e.g., mobile app)
-
-Field test logs
-
-Automated UI validation scripts (e.g., Appium, Selenium)
+        1.Description:
+                - Performed by the QA team or client to ensure that the final product meets business, functional, and user requirements. This is the final validation before release.
+        -- Example:
+                - In a GPS tracking device, verify that the location is updated every 30 seconds in the mobile app.
+                - Tester ensures end-to-end system (hardware → firmware → server → app) works correctly
+        2.What is validated:
+                - All system features function as specified
+                - Edge cases and real-world usage (e.g., cold start, lost GPS signal, battery depletion)
+                - Interface compatibility (e.g., BLE with different phones)
+                
 
 4️⃣ Firmware Validation
 🔍 Description:
