@@ -90,4 +90,147 @@
                 - Firmware stability and responsiveness
                 - Bootloader functionality
                 - Power-on self-tests and startup timing
-                - Response to interrupts, button events, sensors
+                - Response to interrupts, button events, sensors.
+# White Box testing
+-------------------
+        White Box Testing focuses on validating the internal logic, decision-making, and edge cases of your embedded code. It is done with access to the source code, typically using unit testing frameworks, debugging tools, and code coverage tools.
+
+### 1️⃣ Unit Testing
+        1.Description:
+                - Tests individual functions or modules in isolation to ensure they work as expected. This is the most granular level of testing.
+        -- Example:
+                - You have a function that converts ADC sensor values to temperature:
+
+                1️⃣ Unit Testing
+```c
+        float adc_to_temp(uint16_t adc_value)
+         {
+            return (adc_value * 0.1f);
+          }
+```
+Test case might check:
+
+Does adc_to_temp(1000) return 100.0?
+
+What happens when adc_value = 0?
+
+✅ What is validated:
+
+Return values under normal and boundary inputs
+
+Proper use of arithmetic/logical expressions
+
+No side effects or unexpected changes to global state
+
+🛠 Tools used:
+
+Ceedling (for C)
+
+Google Test or CppUTest (for C++)
+
+Mocking libraries for simulating hardware interaction
+
+GCC + gcov for code coverage
+
+2️⃣ Code Path Testing
+🔍 Description:
+Verifies that all possible paths, branches, and conditional logic are executed at least once during testing.
+
+🧪 Example:
+Consider this function:
+
+c
+Copy
+Edit
+int get_motor_state(bool enabled, int rpm) {
+    if (!enabled) return 0;
+    if (rpm > 1000) return 2;
+    return 1;
+}
+You need test cases that cover:
+
+enabled = false → returns 0
+
+enabled = true, rpm = 1500 → returns 2
+
+enabled = true, rpm = 500 → returns 1
+
+✅ What is validated:
+
+All if/else conditions are exercised
+
+Decision coverage (True/False paths for each boolean)
+
+Code does not crash or behave unpredictably in any path
+
+🛠 Tools used:
+
+Unit testing frameworks
+
+Coverage tools (gcov, lcov)
+
+Static analysis tools (Cppcheck, SonarQube)
+
+3️⃣ Boundary Testing
+🔍 Description:
+Focuses on testing edge-case input values that might cause buffer overflows, underflows, or rounding errors.
+
+🧪 Example:
+For an array with size 10:
+
+c
+Copy
+Edit
+int buffer[10];
+Test:
+
+Writing at index 0 ✅
+
+Writing at index 9 ✅
+
+Writing at index 10 ❌ (should fail or be protected)
+
+✅ What is validated:
+
+Proper bounds checking
+
+Array indexing, pointer arithmetic
+
+Input range enforcement (min, max, overflow)
+
+🛠 Tools used:
+
+Unit tests with boundary values
+
+Dynamic analysis (e.g., Valgrind for memory issues)
+
+Runtime assertions
+
+4️⃣ Driver Testing
+🔍 Description:
+Tests low-level hardware drivers like GPIO, I2C, SPI, ADC, and PWM by inspecting code behavior directly and simulating hardware events via mocks.
+
+🧪 Example:
+Testing I2C temperature sensor driver:
+
+Mock sensor to return 0x7FFF
+
+Ensure function interprets this as +127.9°C
+
+Simulate NACK from device and verify retry logic
+
+✅ What is validated:
+
+Register reads/writes, timing delays
+
+Handling of hardware faults (e.g., NACK, busy)
+
+Proper interrupt or DMA behavior if applicable
+
+🛠 Tools used:
+
+Code mocks for registers or buses
+
+Hardware simulation in IDE or CI pipelines
+
+Debugger (e.g., OpenOCD) to step through logic
