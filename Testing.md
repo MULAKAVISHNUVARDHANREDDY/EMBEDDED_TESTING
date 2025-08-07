@@ -114,11 +114,9 @@
             return (adc_value * 0.1f);
           }
 ```
-Test case might check:
-
-Does adc_to_temp(1000) return 100.0?
-
-What happens when adc_value = 0?
+  - Test case might check:
+  - Does adc_to_temp(1000) return 100.0?
+  - What happens when adc_value = 0?
 
 ✅ What is validated:
 
@@ -128,31 +126,19 @@ Proper use of arithmetic/logical expressions
 
 No side effects or unexpected changes to global state
 
-🛠 Tools used:
-
-Ceedling (for C)
-
-Google Test or CppUTest (for C++)
-
-Mocking libraries for simulating hardware interaction
-
-GCC + gcov for code coverage
-
-2️⃣ Code Path Testing
-🔍 Description:
-Verifies that all possible paths, branches, and conditional logic are executed at least once during testing.
-
-🧪 Example:
-Consider this function:
-
-c
-Copy
-Edit
-int get_motor_state(bool enabled, int rpm) {
-    if (!enabled) return 0;
-    if (rpm > 1000) return 2;
-    return 1;
-}
+### 2️⃣ Code Path Testing
+        1.Description:
+                Verifies that all possible paths, branches, and conditional logic are executed
+                at least once during testing.
+```c                
+ Example:
+        int get_motor_state(bool enabled, int rpm)
+        {
+            if (!enabled) return 0;
+            if (rpm > 1000) return 2;
+            return 1;
+        }
+```
 You need test cases that cover:
 
 enabled = false → returns 0
