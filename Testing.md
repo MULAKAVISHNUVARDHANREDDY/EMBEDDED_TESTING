@@ -36,6 +36,7 @@
 | Acceptance Testing   | Ensures the product meets customer and functional requirements           |
 | Firmware Validation  | Tests compiled firmware behavior without reviewing the source code       |
 
+
 1️⃣ System-Level Testing
 
         1.Description:
