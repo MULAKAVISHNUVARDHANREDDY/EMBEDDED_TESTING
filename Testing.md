@@ -89,19 +89,20 @@
          - Interface compatibility (e.g., BLE with different phones)
                 
 ### 4️⃣ Firmware Validation
-                
-          1. Description:
-                - Validates the final compiled and flashed firmware (binary file),without reviewing or modifying the source code.
-                  This confirms that the device behaves correctly with production firmware.
-              Example:
-                        - Flash a wearable device with final firmware
-                        - Test user interactions: tapping the screen should open menus, notifications should vibrate the device
-
-          2.What is validated:
-                - Firmware stability and responsiveness
-                - Bootloader functionality
-                - Power-on self-tests and startup timing
-                - Response to interrupts, button events, sensors.
+              
+   1. Description:
+         - Validates the final compiled and flashed firmware (binary file),without reviewing or modifying the source code.
+           This confirms that the device behaves correctly with production firmware.
+```c
+     Example:
+         - Flash a wearable device with final firmware
+         - Test user interactions: tapping the screen should open menus, notifications should vibrate the device
+```
+   2.What is validated:
+         - Firmware stability and responsiveness
+         - Bootloader functionality
+         - Power-on self-tests and startup timing
+         - Response to interrupts, button events, sensors.
 # White Box testing
 -------------------
 - White Box Testing focuses on validating the internal logic, decision-making, and edge cases of your embedded code. 
