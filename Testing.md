@@ -16,7 +16,8 @@
        - Ensures hardware-software integration is reliable
        - Validates real-time behavior and timing requirements
        - Reduces the risk of field failures
-
+## Black Box testing
+---------------------
 3.What is Black Box Testing?
 
   - Black Box Testing is a testing technique where the internal structure, design, or implementation of the system is not known to the tester. It validates the system’s behavior solely based on input and output.
