@@ -52,7 +52,7 @@
                 - Hardware connections and debounce logic
                 - Real-time responsiveness (e.g., output within 100ms.
 
-2️⃣ Protocol Testing
+### 2️⃣ Protocol Testing
 
         1.Description:
                 - Used to verify that communication over serial protocols (UART, SPI, I2C, CAN, etc.) works correctly and complies with the expected message structure and timing.
@@ -66,7 +66,7 @@
                 - Timing requirements (e.g., response time < 50 ms)
                 - CRC/error checking, framing, and retries.
 
-3️⃣ Acceptance Testing
+### 3️⃣ Acceptance Testing
 
         1.Description:
                 - Performed by the QA team or client to ensure that the final product meets business, functional, and user requirements. This is the final validation before release.
@@ -78,7 +78,7 @@
                 - Edge cases and real-world usage (e.g., cold start, lost GPS signal, battery depletion)
                 - Interface compatibility (e.g., BLE with different phones)
                 
-4️⃣ Firmware Validation
+### 4️⃣ Firmware Validation
                 
           1. Description:
                 - Validates the final compiled and flashed firmware (binary file), without reviewing or modifying the source code. This confirms that the device behaves correctly with production firmware.
