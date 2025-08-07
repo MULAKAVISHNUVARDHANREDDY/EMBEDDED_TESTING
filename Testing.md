@@ -30,6 +30,8 @@
     - Closely mimics real-world usage
     - Useful for validating final firmware, hardware integration, and system behavior
     - Essential for user acceptance and regulatory testing
+
+    
 | Use Case             | Description                                                              |
 | -------------------- | ------------------------------------------------------------------------ |
 | System-level Testing | Verifies entire embedded system behavior (e.g., Button → LED ON)         |
@@ -76,23 +78,16 @@
                 - Edge cases and real-world usage (e.g., cold start, lost GPS signal, battery depletion)
                 - Interface compatibility (e.g., BLE with different phones)
                 
-
 4️⃣ Firmware Validation
-🔍 Description:
-Validates the final compiled and flashed firmware (binary file), without reviewing or modifying the source code. This confirms that the device behaves correctly with production firmware.
+                
+          1. Description:
+                - Validates the final compiled and flashed firmware (binary file), without reviewing or modifying the source code. This confirms that the device behaves correctly with production firmware.
+           -- Example:
+                - Flash a wearable device with final firmware
+                - Test user interactions: tapping the screen should open menus, notifications should vibrate the device
 
-🧪 Example:
-
-Flash a wearable device with final firmware
-
-Test user interactions: tapping the screen should open menus, notifications should vibrate the device
-
-✅ What is validated:
-
-Firmware stability and responsiveness
-
-Bootloader functionality
-
-Power-on self-tests and startup timing
-
-Response to interrupts, button events, sensors
+          2.What is validated:
+                - Firmware stability and responsiveness
+                - Bootloader functionality
+                - Power-on self-tests and startup timing
+                - Response to interrupts, button events, sensors
