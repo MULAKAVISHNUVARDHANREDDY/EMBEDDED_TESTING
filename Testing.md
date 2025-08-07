@@ -104,8 +104,9 @@ It is done with access to the source code, typically using unit testing framewor
 ### 1️⃣ Unit Testing
 
 1.Description:
-        - Tests individual functions or modules in isolation to ensure they work as expected.
-          This is the most granular level of testing.
+
+   - Tests individual functions or modules in isolation to ensure they work as expected.
+     This is the most granular level of testing.
 
 ```c
   Example:
@@ -116,13 +117,14 @@ It is done with access to the source code, typically using unit testing framewor
          }
 ```
   - Test case might check:
-  - Does adc_to_temp(1000) return 100.0?
-  - What happens when adc_value = 0?
+          - Does adc_to_temp(1000) return 100.0?
+          - What happens when adc_value = 0?
     
 2.What is validated:
-        - Return values under normal and boundary inputs
-        - Proper use of arithmetic/logical expressions
-        - No side effects or unexpected changes to global state
+
+   - Return values under normal and boundary inputs.
+   - Proper use of arithmetic/logical expressions.
+   - No side effects or unexpected changes to global state.
 
 ### 2️⃣ Code Path Testing
         1.Description:
