@@ -72,8 +72,8 @@
 ### 3️⃣ Acceptance Testing
 
         1.Description:
-                - Performed by the QA team or client to ensure that the final product meets business,functional and user requirements.
-                   This is the final validation before release.
+               - Performed by the QA team or client to ensure that the final product meets business,functional and user requirements.
+                 This is the final validation before release.
          Example:
                 - In a GPS tracking device, verify that the location is updated every 30 seconds in the mobile app.
                 - Tester ensures end-to-end system (hardware → firmware → server → app) works correctly
