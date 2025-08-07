@@ -102,17 +102,17 @@
         It is done with access to the source code, typically using unit testing frameworks, debugging tools, and code coverage tools.
 
 ### 1️⃣ Unit Testing
-        1.Description:
-                - Tests individual functions or modules in isolation to ensure they work as expected.
-                   This is the most granular level of testing.
-         Example:
-                - You have a function that converts ADC sensor values to temperature:
+1.Description:
+        - Tests individual functions or modules in isolation to ensure they work as expected.
+          This is the most granular level of testing.
 
 ```c
+  Example:
+      - You have a function that converts ADC sensor values to temperature:
         float adc_to_temp(uint16_t adc_value)
          {
             return (adc_value * 0.1f);
-          }
+         }
 ```
   - Test case might check:
   - Does adc_to_temp(1000) return 100.0?
