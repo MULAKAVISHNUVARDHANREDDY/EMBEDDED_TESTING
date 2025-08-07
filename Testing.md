@@ -127,9 +127,9 @@ It is done with access to the source code, typically using unit testing framewor
    - No side effects or unexpected changes to global state.
 
 ### 2️⃣ Code Path Testing
-        1.Description:
-                Verifies that all possible paths, branches, and conditional logic are executed
-                at least once during testing.
+   1.Description:
+       - Verifies that all possible paths, branches, and conditional logic are executed
+         at least once during testing.
 ```c                
  Example:
         int get_motor_state(bool enabled, int rpm)
@@ -140,12 +140,9 @@ It is done with access to the source code, typically using unit testing framewor
         }
 ```
 You need test cases that cover:
-
-enabled = false → returns 0
-
-enabled = true, rpm = 1500 → returns 2
-
-enabled = true, rpm = 500 → returns 1
+ - enabled = false → returns 0
+ - enabled = true, rpm = 1500 → returns 2
+ - enabled = true, rpm = 500 → returns 1
 
 ✅ What is validated:
 
