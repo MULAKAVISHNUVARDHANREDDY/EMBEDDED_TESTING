@@ -16,7 +16,7 @@
        - Ensures hardware-software integration is reliable
        - Validates real-time behavior and timing requirements
        - Reduces the risk of field failures
-## Black Box testing
+# Black Box testing
 ---------------------
 3.What is Black Box Testing?
 
