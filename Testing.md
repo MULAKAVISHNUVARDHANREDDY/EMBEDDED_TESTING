@@ -45,7 +45,7 @@
         1.Description:
                 - This involves testing the entire embedded system as a whole
                    hardware, firmware, sensors, user interface, and communication — from an external point of view.
-          -- Example:
+         Example:
                 - In a smart home device, pressing a physical button should activate a motor and turn on an indicator LED.
                 - The tester verifies the result by pressing the button and checking the motor response and LED state without
                    knowing the internal logic or how the signal was processed.
@@ -57,8 +57,9 @@
 ### 2️⃣ Protocol Testing
 
         1.Description:
-                - Used to verify that communication over serial protocols (UART, SPI, I2C, CAN, etc.) works correctly and complies with the expected message structure and timing.
-           -- Example:
+                - Used to verify that communication over serial protocols (UART, SPI, I2C, CAN, etc.)
+                   works correctly and complies with the expected message structure and timing.
+         Example:
                 - Send a command like AT+TEMP? over UART to a microcontroller
                 - Check if the response is OK:25.3 or ERROR
                 - The tester monitors protocol lines and logs to evaluate behavior
@@ -71,8 +72,9 @@
 ### 3️⃣ Acceptance Testing
 
         1.Description:
-                - Performed by the QA team or client to ensure that the final product meets business, functional, and user requirements. This is the final validation before release.
-        -- Example:
+                - Performed by the QA team or client to ensure that the final product meets business, functional, and user requirements.
+                   This is the final validation before release.
+         Example:
                 - In a GPS tracking device, verify that the location is updated every 30 seconds in the mobile app.
                 - Tester ensures end-to-end system (hardware → firmware → server → app) works correctly
         2.What is validated:
@@ -83,10 +85,11 @@
 ### 4️⃣ Firmware Validation
                 
           1. Description:
-                - Validates the final compiled and flashed firmware (binary file), without reviewing or modifying the source code. This confirms that the device behaves correctly with production firmware.
-           -- Example:
-                - Flash a wearable device with final firmware
-                - Test user interactions: tapping the screen should open menus, notifications should vibrate the device
+                - Validates the final compiled and flashed firmware (binary file), without reviewing or modifying the source code.
+                  This confirms that the device behaves correctly with production firmware.
+              Example:
+                        - Flash a wearable device with final firmware
+                        - Test user interactions: tapping the screen should open menus, notifications should vibrate the device
 
           2.What is validated:
                 - Firmware stability and responsiveness
@@ -95,15 +98,16 @@
                 - Response to interrupts, button events, sensors.
 # White Box testing
 -------------------
-        White Box Testing focuses on validating the internal logic, decision-making, and edge cases of your embedded code. It is done with access to the source code, typically using unit testing frameworks, debugging tools, and code coverage tools.
+        White Box Testing focuses on validating the internal logic, decision-making, and edge cases of your embedded code. 
+        It is done with access to the source code, typically using unit testing frameworks, debugging tools, and code coverage tools.
 
 ### 1️⃣ Unit Testing
         1.Description:
-                - Tests individual functions or modules in isolation to ensure they work as expected. This is the most granular level of testing.
-        -- Example:
+                - Tests individual functions or modules in isolation to ensure they work as expected.
+                   This is the most granular level of testing.
+         Example:
                 - You have a function that converts ADC sensor values to temperature:
 
-                1️⃣ Unit Testing
 ```c
         float adc_to_temp(uint16_t adc_value)
          {
