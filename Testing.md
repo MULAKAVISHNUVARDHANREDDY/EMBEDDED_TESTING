@@ -37,6 +37,7 @@
 | Firmware Validation  | Tests compiled firmware behavior without reviewing the source code       |
 
 1️⃣ System-Level Testing
+
         1.Description:
                 - This involves testing the entire embedded system as a whole — hardware, firmware, sensors, user interface, and communication — from an external point of view.
           -- Example:
@@ -48,6 +49,7 @@
                 - Real-time responsiveness (e.g., output within 100ms.
 
 2️⃣ Protocol Testing
+
         1.Description:
                 - Used to verify that communication over serial protocols (UART, SPI, I2C, CAN, etc.) works correctly and complies with the expected message structure and timing.
            -- Example:
