@@ -152,7 +152,8 @@ You need test cases that cover:
 
 ### 3️⃣ Boundary Testing
 1.Description:
-        - Focuses on testing edge-case input values that might cause buffer overflows, underflows, or rounding errors.
+
+   - Focuses on testing edge-case input values that might cause buffer overflows, underflows, or rounding errors.
 ```c
 Example:
 For an array with size 10:
@@ -160,54 +161,28 @@ int buffer[10];
 ```
 
 Test:
+- Writing at index 0 ✅
+- Writing at index 9 ✅
+- Writing at index 10 ❌ (should fail or be protected)
+2.What is validated:
+     - Proper bounds checking.
+     - Array indexing, pointer arithmetic.
+     - Input range enforcement (min, max, overflow).
+  
+### 4️⃣ Driver Testing
 
-Writing at index 0 ✅
+1.Description:
 
-Writing at index 9 ✅
-
-Writing at index 10 ❌ (should fail or be protected)
-
-✅ What is validated:
-
-Proper bounds checking
-
-Array indexing, pointer arithmetic
-
-Input range enforcement (min, max, overflow)
-
-🛠 Tools used:
-
-Unit tests with boundary values
-
-Dynamic analysis (e.g., Valgrind for memory issues)
-
-Runtime assertions
-
-4️⃣ Driver Testing
-🔍 Description:
-Tests low-level hardware drivers like GPIO, I2C, SPI, ADC, and PWM by inspecting code behavior directly and simulating hardware events via mocks.
-
-🧪 Example:
+   - Tests low-level hardware drivers like GPIO, I2C, SPI, ADC, and PWM by inspecting code behavior directly and simulating hardware events via mocks.
+```c
+Example:
 Testing I2C temperature sensor driver:
-
-Mock sensor to return 0x7FFF
-
-Ensure function interprets this as +127.9°C
-
-Simulate NACK from device and verify retry logic
-
-✅ What is validated:
-
-Register reads/writes, timing delays
-
-Handling of hardware faults (e.g., NACK, busy)
-
-Proper interrupt or DMA behavior if applicable
-
-🛠 Tools used:
-
-Code mocks for registers or buses
-
-Hardware simulation in IDE or CI pipelines
-
-Debugger (e.g., OpenOCD) to step through logic
+```
+- Mock sensor to return 0x7FFF.
+- Ensure function interprets this as +127.9°C.
+- Simulate NACK from device and verify retry logic.
+  
+2.What is validated:
+   - Register reads/writes, timing delays
+   - Handling of hardware faults (e.g., NACK, busy)
+   - Proper interrupt or DMA behavior if applicable
