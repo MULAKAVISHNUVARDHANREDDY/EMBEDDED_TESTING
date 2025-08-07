@@ -1,19 +1,21 @@
 # Embedded Testing
 -------------------
 1. What is Embedded Testing?
-Embedded Testing is the process of validating and verifying the functionality, performance, timing, and safety of embedded hardware-software systems. These systems are often part of real-time environments such as:
-- Automotive ECUs
-- Medical devices
-- Consumer electronics
-- IoT and wearable devices
+- Embedded Testing is the process of validating and verifying the functionality, performance, timing, and safety of embedded hardware-software systems. These systems are often part of real-time environments such as:
 
-Embedded systems have strict constraints like timing, power usage, memory limitations, and interface precision, which makes testing a crucial and complex task.
+        - Automotive ECUs
+        - Medical devices
+        - Consumer electronics
+        - IoT and wearable devices
+
+- Embedded systems have strict constraints like timing, power usage, memory limitations, and interface precision, which makes testing a crucial and complex task.
 
 2. Why is Embedded Testing Important?
-        - Helps detect bugs early in development
-        - Ensures hardware-software integration is reliable
-        - Validates real-time behavior and timing requirements
-        - Reduces the risk of field failures
+
+       - Helps detect bugs early in development
+       - Ensures hardware-software integration is reliable
+       - Validates real-time behavior and timing requirements
+       - Reduces the risk of field failures
 
 3.What is Black Box Testing?
 
@@ -27,3 +29,9 @@ Embedded systems have strict constraints like timing, power usage, memory limita
     - Closely mimics real-world usage
     - Useful for validating final firmware, hardware integration, and system behavior
     - Essential for user acceptance and regulatory testing
+| Use Case             | Description                                                              |
+| -------------------- | ------------------------------------------------------------------------ |
+| System-level Testing | Verifies entire embedded system behavior (e.g., Button → LED ON)         |
+| Protocol Testing     | Sends and receives data via UART, SPI, I2C and checks for correct output |
+| Acceptance Testing   | Ensures the product meets customer and functional requirements           |
+| Firmware Validation  | Tests compiled firmware behavior without reviewing the source code       |
