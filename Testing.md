@@ -43,10 +43,12 @@
 ### 1️⃣ System-Level Testing
 
         1.Description:
-                - This involves testing the entire embedded system as a whole — hardware, firmware, sensors, user interface, and communication — from an external point of view.
+                - This involves testing the entire embedded system as a whole
+                   hardware, firmware, sensors, user interface, and communication — from an external point of view.
           -- Example:
                 - In a smart home device, pressing a physical button should activate a motor and turn on an indicator LED.
-                - The tester verifies the result by pressing the button and checking the motor response and LED state without knowing the internal logic or how the signal was processed.
+                - The tester verifies the result by pressing the button and checking the motor response and LED state without
+                   knowing the internal logic or how the signal was processed.
         2.What is validated:
                 - Complete signal flow from input (button) to output (motor/LED)
                 - Hardware connections and debounce logic
