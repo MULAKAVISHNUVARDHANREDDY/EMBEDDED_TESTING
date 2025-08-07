@@ -42,45 +42,51 @@
 
 ### 1️⃣ System-Level Testing
 
-        1.Description:
-                - This involves testing the entire embedded system as a whole
-                   hardware, firmware, sensors, user interface, and communication — from an external point of view.
-         Example:
-                - In a smart home device, pressing a physical button should activate a motor and turn on an indicator LED.
-                - The tester verifies the result by pressing the button and checking the motor response and LED state without
-                   knowing the internal logic or how the signal was processed.
-        2.What is validated:
-                - Complete signal flow from input (button) to output (motor/LED)
-                - Hardware connections and debounce logic
-                - Real-time responsiveness (e.g., output within 100ms.
+ 1.Description:
+     - This involves testing the entire embedded system as a whole
+       hardware, firmware, sensors, user interface, and communication — from an external point of view.
+```c
+  Example:
+      - In a smart home device, pressing a physical button should activate a motor and turn on an indicator LED.
+      - The tester verifies the result by pressing the button and checking the motor response and LED state without
+      - knowing the internal logic or how the signal was processed.
+```
+ 2.What is validated:
+       - Complete signal flow from input (button) to output (motor/LED)
+       - Hardware connections and debounce logic
+       - Real-time responsiveness (e.g., output within 100ms.
 
 ### 2️⃣ Protocol Testing
 
-        1.Description:
-                - Used to verify that communication over serial protocols (UART, SPI, I2C, CAN, etc.)
-                   works correctly and complies with the expected message structure and timing.
-         Example:
-                - Send a command like AT+TEMP? over UART to a microcontroller
-                - Check if the response is OK:25.3 or ERROR
-                - The tester monitors protocol lines and logs to evaluate behavior
-        2.What is validated:
-                - Correct command parsing
-                - Valid response formatting
-                - Timing requirements (e.g., response time < 50 ms)
-                - CRC/error checking, framing, and retries.
+  1.Description:
+      - Used to verify that communication over serial protocols (UART, SPI, I2C, CAN, etc.)
+        works correctly and complies with the expected message structure and timing.
+```c  
+   Example:
+       - Send a command like AT+TEMP? over UART to a microcontroller
+       - Check if the response is OK:25.3 or ERROR
+       - The tester monitors protocol lines and logs to evaluate behavior
+```
+   2.What is validated:
+        - Correct command parsing
+        - Valid response formatting
+        - Timing requirements (e.g., response time < 50 ms)
+        - CRC/error checking, framing, and retries.
 
 ### 3️⃣ Acceptance Testing
 
-        1.Description:
-               - Performed by the QA team or client to ensure that the final product meets business,functional and user requirements.
-                 This is the final validation before release.
-         Example:
-                - In a GPS tracking device, verify that the location is updated every 30 seconds in the mobile app.
-                - Tester ensures end-to-end system (hardware → firmware → server → app) works correctly
-        2.What is validated:
-                - All system features function as specified
-                - Edge cases and real-world usage (e.g., cold start, lost GPS signal, battery depletion)
-                - Interface compatibility (e.g., BLE with different phones)
+   1.Description:
+       - Performed by the QA team or client to ensure that the final product meets business,functional and user requirements.
+         This is the final validation before release.
+ ```c
+     Example:
+         - In a GPS tracking device, verify that the location is updated every 30 seconds in the mobile app.
+         - Tester ensures end-to-end system (hardware → firmware → server → app) works correctly
+```
+   2.What is validated:
+         - All system features function as specified
+         - Edge cases and real-world usage (e.g., cold start, lost GPS signal, battery depletion)
+         - Interface compatibility (e.g., BLE with different phones)
                 
 ### 4️⃣ Firmware Validation
                 
