@@ -144,33 +144,21 @@ You need test cases that cover:
  - enabled = true, rpm = 1500 → returns 2
  - enabled = true, rpm = 500 → returns 1
 
-✅ What is validated:
+2.What is validated:
 
-All if/else conditions are exercised
+ - All if/else conditions are exercised.
+ - Decision coverage (True/False paths for each boolean).
+ - Code does not crash or behave unpredictably in any path.
 
-Decision coverage (True/False paths for each boolean)
-
-Code does not crash or behave unpredictably in any path
-
-🛠 Tools used:
-
-Unit testing frameworks
-
-Coverage tools (gcov, lcov)
-
-Static analysis tools (Cppcheck, SonarQube)
-
-3️⃣ Boundary Testing
-🔍 Description:
-Focuses on testing edge-case input values that might cause buffer overflows, underflows, or rounding errors.
-
-🧪 Example:
+### 3️⃣ Boundary Testing
+1.Description:
+        - Focuses on testing edge-case input values that might cause buffer overflows, underflows, or rounding errors.
+```c
+Example:
 For an array with size 10:
-
-c
-Copy
-Edit
 int buffer[10];
+```
+
 Test:
 
 Writing at index 0 ✅
