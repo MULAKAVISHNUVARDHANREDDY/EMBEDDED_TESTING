@@ -18,12 +18,12 @@
        - Reduces the risk of field failures
 # Black Box testing
 ---------------------
-3.What is Black Box Testing?
+1.What is Black Box Testing?
 
   - Black Box Testing is a testing technique where the internal structure, design, or implementation of the system is not known to the tester. It validates the system’s behavior solely based on input and output.
   In embedded systems, it is used to ensure that the system works as expected from the user or external interface perspective — without needing access to the source code or internal logic.
   
-4.Why is Black Box Testing Important?
+2.Why is Black Box Testing Important?
 
     - Does not require source code access
     - Tests the complete system functionality
@@ -98,10 +98,11 @@
                 - Response to interrupts, button events, sensors.
 # White Box testing
 -------------------
-        White Box Testing focuses on validating the internal logic, decision-making, and edge cases of your embedded code. 
-        It is done with access to the source code, typically using unit testing frameworks, debugging tools, and code coverage tools.
+- White Box Testing focuses on validating the internal logic, decision-making, and edge cases of your embedded code. 
+It is done with access to the source code, typically using unit testing frameworks, debugging tools, and code coverage tools.
 
 ### 1️⃣ Unit Testing
+
 1.Description:
         - Tests individual functions or modules in isolation to ensure they work as expected.
           This is the most granular level of testing.
@@ -117,14 +118,11 @@
   - Test case might check:
   - Does adc_to_temp(1000) return 100.0?
   - What happens when adc_value = 0?
-
-✅ What is validated:
-
-Return values under normal and boundary inputs
-
-Proper use of arithmetic/logical expressions
-
-No side effects or unexpected changes to global state
+    
+2.What is validated:
+        - Return values under normal and boundary inputs
+        - Proper use of arithmetic/logical expressions
+        - No side effects or unexpected changes to global state
 
 ### 2️⃣ Code Path Testing
         1.Description:
