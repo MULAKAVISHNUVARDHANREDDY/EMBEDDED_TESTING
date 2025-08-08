@@ -270,9 +270,10 @@ Testing I2C temperature sensor driver:
 2.Goal:
   - Prove product readiness for deployment.
 
-📊 Summary Table
-Level	Name	Scope / Purpose	Example Test
-L0	Developer / Component Testing	Unit, static analysis, code coverage	Test motor_start() function
-L1	Module / Integration Testing	Verify module interactions, HAL APIs	Sensor driver + protocol check
-L2	System-Level Testing	Full system validation in real conditions	Smart meter end-to-end test
-L3	Validation / Acceptance Testing	Regulatory and user requirement compliance	Client UAT for wearable tracker
+| Level  | Name                            | Scope / Purpose                            | Example Test                    |
+| ------ | ------------------------------- | ------------------------------------------ | ------------------------------- |
+| **L0** | Developer / Component Testing   | Unit, static analysis, code coverage       | Test `motor_start()` function   |
+| **L1** | Module / Integration Testing    | Verify module interactions, HAL APIs       | Sensor driver + protocol check  |
+| **L2** | System-Level Testing            | Full system validation in real conditions  | Smart meter end-to-end test     |
+| **L3** | Validation / Acceptance Testing | Regulatory and user requirement compliance | Client UAT for wearable tracker |
+
