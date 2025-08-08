@@ -265,7 +265,7 @@ Testing I2C temperature sensor driver:
         - Field/Production Testing (factory line verification)
 ```c
         Example:
-        - In an automotive ECU: test acceleration sensor feedback under actual driving conditions, following ISO 26262 standards.
+        - In an automotive ECU: test acceleration sensor feedback under actual driving conditions.
 ```
 2.Goal:
   - Prove product readiness for deployment.
