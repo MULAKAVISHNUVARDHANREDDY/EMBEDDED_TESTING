@@ -1,4 +1,4 @@
-# Embedded Testing
+# Testing
 -------------------
 1. What is Embedded Testing?
 - Embedded Testing is the process of validating and verifying the functionality, performance, timing, and safety of embedded hardware-software systems. These systems are often part of real-time environments such as:
@@ -193,3 +193,90 @@ Testing I2C temperature sensor driver:
    - Register reads/writes, timing delays
    - Handling of hardware faults (e.g., NACK, busy)
    - Proper interrupt or DMA behavior if applicable
+# Levels in Testing
+-------------------
+L0 – Developer-Level / Component Testing
+Scope:
+        - Done at the lowest level, by developers, during coding.
+          Focused on verifying the correctness of individual functions or modules in isolation.
+
+        Includes:
+        Unit Testing (logic, boundaries, error handling)
+        Static Code Analysis (MISRA rules, memory safety)
+        Code Coverage Measurement (statement, branch, MC/DC)
+```c
+Example:
+Testing read_sensor() function to ensure it returns correct values for various ADC inputs.
+```
+Goal:
+        - Catch and fix bugs before integration.
+
+L1 – Module/Integration-Level Testing
+Scope:
+
+Combines two or more software modules or hardware drivers and verifies their interaction.
+
+Often run on development boards or hardware simulators.
+
+Includes:
+
+Integration Testing (driver + algorithm + application logic)
+
+Hardware Abstraction Layer (HAL) Testing
+
+Interface Protocol Testing (UART, SPI, I2C)
+
+Example:
+Test sensor driver + I2C communication + filtering algorithm to confirm correct end-to-end reading.
+
+Goal:
+Ensure components communicate and exchange data correctly.
+
+L2 – System-Level Testing
+Scope:
+
+Validates the entire embedded system (hardware + firmware) under real or simulated operational conditions.
+
+Black Box approach is often used here.
+
+Includes:
+
+System Testing (full device functionality)
+
+Regression Testing (re-run after changes)
+
+Performance Testing (speed, memory, power usage)
+
+Example:
+Test a wearable device’s complete workflow: user taps → sensor reads → display updates → data sent over BLE.
+
+Goal:
+Ensure the integrated system meets specifications and functions correctly in various scenarios.
+
+L3 – Validation / Acceptance Testing
+Scope:
+
+Final testing before release to customer or production.
+
+Ensures compliance with user requirements and regulatory standards.
+
+Includes:
+
+User Acceptance Testing (UAT)
+
+Compliance Testing (ISO, IEC, DO-178C, etc.)
+
+Field/Production Testing (factory line verification)
+
+Example:
+In an automotive ECU: test acceleration sensor feedback under actual driving conditions, following ISO 26262 standards.
+
+Goal:
+Prove product readiness for deployment.
+
+📊 Summary Table
+Level	Name	Scope / Purpose	Example Test
+L0	Developer / Component Testing	Unit, static analysis, code coverage	Test motor_start() function
+L1	Module / Integration Testing	Verify module interactions, HAL APIs	Sensor driver + protocol check
+L2	System-Level Testing	Full system validation in real conditions	Smart meter end-to-end test
+L3	Validation / Acceptance Testing	Regulatory and user requirement compliance	Client UAT for wearable tracker
