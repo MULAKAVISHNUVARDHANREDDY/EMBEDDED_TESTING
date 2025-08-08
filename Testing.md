@@ -198,25 +198,28 @@ Testing I2C temperature sensor driver:
 **L0 – Developer-Level / Component Testing**
 -------------------------------------------
 1.Scope:
-        - Done at the lowest level, by developers, during coding.
-          Focused on verifying the correctness of individual functions or modules in isolation.
+
+   - Done at the lowest level, by developers, during coding.
+     Focused on verifying the correctness of individual functions or modules in isolation.
 
         Includes:
         - Unit Testing (logic, boundaries, error handling)
         - Static Code Analysis (MISRA rules, memory safety)
         - Code Coverage Measurement (statement, branch, MC/DC)
 ```c
-Example:
-Testing read_sensor() function to ensure it returns correct values for various ADC inputs.
+        Example:
+          - Testing read_sensor() function to ensure it returns correct values for various ADC inputs.
 ```
 2.Goal:
-        - Catch and fix bugs before integration.
+
+   - Catch and fix bugs before integration.
 
 **L1 – Module/Integration-Level Testing**
 ----------------------------------------
 1.Scope:
-        - Combines two or more software modules or hardware drivers and verifies their interaction.
-          Often run on development boards or hardware simulators.
+
+   - Combines two or more software modules or hardware drivers and verifies their interaction.
+     Often run on development boards or hardware simulators.
         
         Includes:
         - Integration Testing (driver + algorithm + application logic)
@@ -226,50 +229,46 @@ Testing read_sensor() function to ensure it returns correct values for various A
        Example:
         - Test sensor driver + I2C communication + filtering algorithm to confirm correct end-to-end reading.
 ```
-Goal:
-Ensure components communicate and exchange data correctly.
+2.Goal:
 
-L2 – System-Level Testing
-Scope:
+   - Ensure components communicate and exchange data correctly.
 
-Validates the entire embedded system (hardware + firmware) under real or simulated operational conditions.
+**L2 – System-Level Testing**
+------------------------------
+1.Scope:
 
-Black Box approach is often used here.
+- Validates the entire embedded system (hardware + firmware) under real or simulated operational conditions.
+  Black Box approach is often used here.
 
-Includes:
+        Includes:
+        - System Testing (full device functionality)
+        - Regression Testing (re-run after changes)
+        - Performance Testing (speed, memory, power usage)
+```c
+        Example:
+          - Test a wearable device’s complete workflow: user taps → sensor reads → display updates → data sent over BLE.
+```
+2.Goal:
 
-System Testing (full device functionality)
+  - Ensure the integrated system meets specifications and functions correctly in various scenarios.
 
-Regression Testing (re-run after changes)
+**L3 – Validation / Acceptance Testing**
+---------------------------------------
+1.Scope:
 
-Performance Testing (speed, memory, power usage)
+- Final testing before release to customer or production.
+- Ensures compliance with user requirements and regulatory standards.
 
-Example:
-Test a wearable device’s complete workflow: user taps → sensor reads → display updates → data sent over BLE.
-
-Goal:
-Ensure the integrated system meets specifications and functions correctly in various scenarios.
-
-L3 – Validation / Acceptance Testing
-Scope:
-
-Final testing before release to customer or production.
-
-Ensures compliance with user requirements and regulatory standards.
-
-Includes:
-
-User Acceptance Testing (UAT)
-
-Compliance Testing (ISO, IEC, DO-178C, etc.)
-
-Field/Production Testing (factory line verification)
-
-Example:
-In an automotive ECU: test acceleration sensor feedback under actual driving conditions, following ISO 26262 standards.
-
-Goal:
-Prove product readiness for deployment.
+        Includes:
+        - User Acceptance Testing (UAT)
+        - Compliance Testing (ISO, IEC, DO-178C, etc.)
+        - Field/Production Testing (factory line verification)
+```c
+        Example:
+        - In an automotive ECU: test acceleration sensor feedback under actual driving conditions, following ISO 26262 standards.
+```
+2.Goal:
+  - Prove product readiness for deployment.
 
 📊 Summary Table
 Level	Name	Scope / Purpose	Example Test
