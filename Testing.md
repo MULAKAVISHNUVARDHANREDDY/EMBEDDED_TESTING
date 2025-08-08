@@ -43,8 +43,9 @@
 ### 1️⃣ System-Level Testing
 
  1.Description:
-     - This involves testing the entire embedded system as a whole
-       hardware, firmware, sensors, user interface, and communication — from an external point of view.
+ 
+   - This involves testing the entire embedded system as a whole
+     hardware, firmware, sensors, user interface, and communication — from an external point of view.
 ```c
   Example:
       - In a smart home device, pressing a physical button should activate a motor and turn on an indicator LED.
